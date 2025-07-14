@@ -1,0 +1,209 @@
+@font-face {
+  font-family: Raleway;
+  src: url(Raleway-VariableFont_wght.ttf);
+}
+
+
+
+img{
+    border-radius: 15px;
+}
+
+body{
+    font-family: Raleway;
+    margin: 0;
+    background-color: #faf2f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+}
+
+.locations{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+
+#location1{
+    margin-top: 195px;
+    margin-left: 80px;
+}
+
+#location2{
+    margin-top: 225px;
+    margin-left: 93px;
+}
+
+#location3{
+    margin-top: 273px;
+    margin-left: 110px;
+}
+
+#location4{
+    margin-top: 280px;
+    margin-left: 40px;
+}
+
+#location5{
+    margin-top: 260px;
+    margin-left: 10px;
+}
+
+#location6{
+    margin-top: 235px;
+    margin-left: 6px;
+}
+
+#location7{
+    margin-top: 315px;
+    margin-left: -55px;
+}
+
+#location8{
+    margin-top: 305px;
+    margin-left: -175px;
+}
+
+
+span:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+    transition: ease 0.25s;
+}
+
+
+        
+        .grid-title {
+            grid-column: 1 / -1;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #1d2327;
+        }
+        
+ .grid-container {
+    padding: 3%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Changed to minmax(0, 1fr) for better spacing control */
+    gap: 3%; /* Reduced gap from 20px to 10px */
+    max-width: 900px; /* Reduced max-width to bring grids closer */
+    margin: 0 auto;
+}
+
+.grid-preview {
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: all 0.2s ease;
+    height: 200px;
+    width: 100%; /* Changed from fixed width to 100% */
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+/* Remove the center alignment from body as it's already handled by grid */
+        
+        .grid-preview:hover {
+            border-color: #999;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+            cursor: pointer;
+        }
+        
+        .grid-name {
+            text-align: center;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 8px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #757575;
+            border-radius: 2px;
+        }
+
+        /* Individual grids */
+
+        #grid1{
+            background: #ffd8c5;
+        }
+        #grid2{
+            background: #b8e0d2;
+        }
+        #grid3{
+            background: #e8c4c4;
+        }
+        #grid4{
+            background: #d4c5e3;
+        }
+        #grid5{
+            background: #f0e2c5;
+        }
+        #grid6{
+            background: #c5d4e8;
+        }
+        #grid7{
+            background: #d4e0c5;
+        }
+        #grid8{
+            background: #f0c5c5;
+        }
+        .thumbnails{
+            max-width: 100%;
+            max-height: 100%;
+            float: left;
+        }
+        p{ 
+            float: right;
+            margin-top: 50px;
+            font-size: 25px;
+            padding-right: 20%;
+            font-weight: 500;
+            
+        }
+
+        /*=============================*/
+/* GROW EFFECT
+/*=============================*/
+
+.grow-on-hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.grow-on-hover:hover, .grow-on-hover:focus, .grow-on-hover:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+#credit {
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    color: #333;
+    margin-top: auto; /* Pushes it to the bottom */
+}
+main {
+    flex: 1;
+    padding-bottom: 40px; /* Space between content and footer */
+}
