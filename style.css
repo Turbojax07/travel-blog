@@ -315,7 +315,7 @@ main {
   margin-bottom: 20vmin;
   width: 8vmin;
   height:8vmin;
-  animation: dolphinMove 1.25s ease-in-out forwards;
+  animation: dolphinMove 8s ease forwards;
   z-index: -3000;
 }
 
