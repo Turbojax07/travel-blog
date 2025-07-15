@@ -3,6 +3,112 @@
   src: url(../Raleway-VariableFont_wght.ttf);
 }
 
+
+/* Update your existing madrid.css with these changes */
+
+/* Add this new variable at the top */
+:root {
+  --mobile-padding: 20px;
+  --mobile-image-width: 20vw; /* 20% of viewport width */
+}
+
+/* Update the existing media query */
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+
+  h1 {
+    min-width: 90%;
+    font-size: 40px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  /* Update paragraph styles to match image width */
+  p {
+    width: var(--mobile-image-width);
+    min-width: 80%; /* Prevent becoming too narrow */
+    padding: 20px;
+    font-size: 18px;
+    margin: 10px auto;
+    box-sizing: border-box;
+  }
+
+  /* Update image styles */
+  .main-image,
+  img[style*="max-width: 40%"] {
+    width: var(--mobile-image-width) !important;
+    max-width: none !important;
+    max-height: none !important;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* Make sure figures match image width */
+  figcaption {
+    width: var(--mobile-image-width);
+    min-width: 250px;
+    margin: 5px auto 15px auto;
+    font-size: 16px;
+  }
+
+  .row {
+    flex-direction: row; /* Keep side-by-side on mobile */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .column {
+    flex: 0 0 var(--mobile-image-width);
+    width: 60%;
+    margin-bottom: 15px;
+  }
+
+  .column img {
+    width: 100%;
+  }
+
+  /* Adjust other elements as needed */
+  #homeIco {
+    max-width: 10%;
+    max-height: 10%;
+    padding: 8px;
+    left: 3%;
+  }
+
+  #credit {
+    font-size: 18px;
+    padding: 15px 0;
+  }
+
+  .next-journey-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .barcelona-link a {
+    font-size: 18px;
+    padding: 10px 18px;
+  }
+}
+
+/* Add this for very small screens */
+@media screen and (max-width: 480px) {
+  :root {
+    --mobile-image-width: 80vw; /* Switch to wider on very small screens */
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 0 0 100%;
+  }
+}
+
 body {
     margin: 0;
     font-family: Raleway;
@@ -48,11 +154,11 @@ figcaption {
   border-radius: 20px;
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .column {
     width: 100%;
   }
-}
+} */
 
 #credit{
   font-size: 25px;
@@ -139,4 +245,132 @@ span{
 .barcelona-link a:hover {
     background-color: #f0f0f0;
     transform: scale(1.05);
+}
+
+/* random ass dolphin I found on codepen */
+
+.box-canvas{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 20vmin;
+  margin-bottom: 20vmin;
+  width: 60vmin;
+  height:60vmin;
+  transform: rotate(-20deg);
+}
+
+.fin-top {
+  position: absolute;
+  left: calc(var(--body-left) + 23vmin);
+  top: calc(var(--body-top) + 15vmin);
+  width: 15vmin;
+  height: 17vmin;
+  border-radius: 20% 40% 50% 50%;
+  box-shadow: 0 -10vmin 0 var(--blue);
+  transform: rotate(-20deg);
+}
+
+.fin-front {
+  position: absolute;
+  top: calc(var(--body-top) + 15vmin);
+  left: calc(var(--body-left) + 17vmin);
+  width: 6vmin;
+  height: 8vmin;
+  border-radius: 52% 48% 0% 100% / 13% 99% 1% 87%  ;
+  background: var(--blue);
+  transform: rotate(-35deg);
+  border-right: 0.5vmin solid #4EAFF4;
+}
+
+.nose {
+  position: absolute;
+  top: calc(var(--body-top) + 7vmin);
+  left: calc(var(--body-left) - 1vmin);
+  width: 10vmin;
+  height: 5vmin;
+  background: linear-gradient(to bottom,
+    var(--blue),
+    var(--blue) 3vmin,
+    var(--blue-light) 3vmin);
+  background: var(--blue);
+  transform: rotate(-20deg);
+  border-radius: 50% 0 0% 50%;
+}
+
+.body {
+  position: absolute;
+  top: var(--body-top);
+  left: var(--body-left);
+  width: 30vmin;
+  height: 40vmin;
+  border-radius: 50% 50% 0% 30% / 50%;
+  background: var(--blue);
+  overflow: hidden;
+}
+
+.body::before {
+  content: '';
+  position: absolute;
+  background: var(--blue-light);
+  width: 30vmin;
+  height: 40vmin;
+  bottom: -10vmin;
+  left: -5vmin;
+  border-radius: 30% 50% 10% 30%;
+}
+
+.eye {
+  position: absolute;
+  top: 4vmin;
+  left: 12vmin;
+  width: 1vmin;
+  height: 1vmin;
+  background: black;
+  border: 0.75vmin solid white;
+  border-radius: 50%;
+}
+
+.cover-up {
+  content: '';
+  position: absolute;
+  background: var(--background-color);
+  width: 30vmin;
+  height: 40vmin;
+  top: calc(var(--body-top) + 11vmin);
+  left: calc(var(--body-left) - 10vmin);
+  border-radius: 30% 50% 30% 30%;
+  transform: rotate(-20deg);
+}
+
+.tail {
+  position: absolute;
+  width: 30vmin;
+  height: 15vmin;
+  top: calc(var(--body-top) + 38vmin);
+  left: calc(var(--body-left) + 11vmin);
+}
+
+.tail::before {
+  content: '';
+  position: absolute;
+  border-radius: 100% 0% 40% 60% / 100% 6% 94% 0% ;
+  width: 15vmin;
+  height: 10vmin;
+  left: 0;
+  background: var(--blue);
+  transform: rotate(-20deg);
+  transform-origin: top right;
+}
+
+.tail::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  border-radius: 0% 100% 40% 60% / 6% 100% 0% 94% ;
+  width: 15vmin;
+  height: 10vmin;
+  background: var(--blue);
+  transform: rotate(20deg);
+  transform-origin: top left;
 }

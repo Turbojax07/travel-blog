@@ -9,10 +9,28 @@ img{
     border-radius: 15px;
 }
 
+@keyframes loadInColor {
+    from{
+        background-color: #fff;
+    }
+    to{
+        background-color: transparent;
+    }
+}
+
+#layerScreen{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: loadInColor 1.5s ease-out forwards;
+    pointer-events: none;
+    z-index: 100000;
+}
+
 body{
     font-family: Raleway;
-    margin: 0;
     background-color: #faf2f0;
+    margin: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -206,4 +224,222 @@ span:hover{
 main {
     flex: 1;
     padding-bottom: 40px; /* Space between content and footer */
+}
+/* Ocean */ 
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:300px;
+  max-height:150px;
+  z-index: -10000;
+}
+
+/* animation */
+
+
+
+.waveAnimation{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+
+    z-index: -1000;
+ 
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+/* random ass dolphin I found on codepen */
+
+@keyframes dolphinMove {
+
+    from{
+        transform: rotate(8deg);;
+        margin-top: 22vmin;
+        margin-left: 15vmin;
+    }
+    to{
+        transform: rotate(-90deg);;
+         margin-top: 140vmin;
+        margin-left: -20vmin;
+
+    }
+}
+
+.box-canvas{
+  position: fixed;
+  margin: auto;
+  display: block;
+  margin-top: 30vmin;
+  margin-bottom: 20vmin;
+  width: 8vmin;
+  height:8vmin;
+  animation: dolphinMove 1.25s ease-in-out forwards;
+  z-index: -3000;
+}
+
+.fin-top {
+  position: absolute;
+  left: calc(var(--body-left) + 23vmin);
+  top: calc(var(--body-top) + 15vmin);
+  width: 15vmin;
+  height: 17vmin;
+  border-radius: 20% 40% 50% 50%;
+  box-shadow: 0 -10vmin 0 var(--blue);
+  transform: rotate(-20deg);
+}
+
+.fin-front {
+  position: absolute;
+  top: calc(var(--body-top) + 15vmin);
+  left: calc(var(--body-left) + 17vmin);
+  width: 6vmin;
+  height: 8vmin;
+  border-radius: 52% 48% 0% 100% / 13% 99% 1% 87%  ;
+  background: var(--blue);
+  transform: rotate(-35deg);
+  border-right: 0.5vmin solid #4EAFF4;
+}
+
+.nose {
+  position: absolute;
+  top: calc(var(--body-top) + 7vmin);
+  left: calc(var(--body-left) - 1vmin);
+  width: 10vmin;
+  height: 5vmin;
+  background: linear-gradient(to bottom,
+    var(--blue),
+    var(--blue) 3vmin,
+    var(--blue-light) 3vmin);
+  background: var(--blue);
+  transform: rotate(-20deg);
+  border-radius: 50% 0 0% 50%;
+}
+
+.body {
+  position: absolute;
+  top: var(--body-top);
+  left: var(--body-left);
+  width: 30vmin;
+  height: 40vmin;
+  border-radius: 50% 50% 0% 30% / 50%;
+  background: var(--blue);
+  overflow: hidden;
+}
+
+.body::before {
+  content: '';
+  position: absolute;
+  background: var(--blue-light);
+  width: 30vmin;
+  height: 40vmin;
+  bottom: -10vmin;
+  left: -5vmin;
+  border-radius: 30% 50% 10% 30%;
+}
+
+.eye {
+  position: absolute;
+  top: 4vmin;
+  left: 12vmin;
+  width: 1vmin;
+  height: 1vmin;
+  background: black;
+  border: 0.75vmin solid white;
+  border-radius: 50%;
+}
+
+.cover-up {
+  content: '';
+  position: absolute;
+  background: var(--background-color);
+  width: 30vmin;
+  height: 40vmin;
+  top: calc(var(--body-top) + 11vmin);
+  left: calc(var(--body-left) - 10vmin);
+  border-radius: 30% 50% 30% 30%;
+  transform: rotate(-20deg);
+}
+
+.tail {
+  position: absolute;
+  width: 30vmin;
+  height: 15vmin;
+  top: calc(var(--body-top) + 38vmin);
+  left: calc(var(--body-left) + 11vmin);
+}
+
+.tail::before {
+  content: '';
+  position: absolute;
+  border-radius: 100% 0% 40% 60% / 100% 6% 94% 0% ;
+  width: 15vmin;
+  height: 10vmin;
+  left: 0;
+  background: var(--blue);
+  transform: rotate(-20deg);
+  transform-origin: top right;
+}
+
+.tail::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  border-radius: 0% 100% 40% 60% / 6% 100% 0% 94% ;
+  width: 15vmin;
+  height: 10vmin;
+  background: var(--blue);
+  transform: rotate(20deg);
+  transform-origin: top left;
+}
+
+:root{
+      --body-left: 13vmin;
+  --body-top: 2vmin;
+  
+  --blue: #66BAF8;
+  --blue-light: #E0F0FD;
+
+   --background-color: #faf2f0;
 }
