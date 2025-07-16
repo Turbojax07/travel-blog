@@ -53,32 +53,21 @@
     font-size: 16px;
   }
 
- .row {
-    flex-direction: row;
+  .row {
+    flex-direction: row; /* Keep side-by-side on mobile */
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    width: 100%; /* Add this */
   }
 
   .column {
     flex: 0 0 var(--mobile-image-width);
-    width: var(--mobile-image-width); /* Change from 60% to match image width */
-    min-width: 250px; /* Add minimum width */
+    width: 60%;
     margin-bottom: 15px;
-    display: flex; /* Add this */
-    flex-direction: column; /* Add this */
-    align-items: center; /* Add this to center content */
   }
 
   .column img {
     width: 100%;
-  }
-
-  /* Add this to center figcaptions in columns */
-  .column figcaption {
-    width: 100%;
-    text-align: center;
   }
 
   /* Adjust other elements as needed */
@@ -87,8 +76,6 @@
     max-height: 10%;
     padding: 8px;
     left: 3%;
-    background-color: hsl(0, 0%, 100%);
-    opacity: 70%;
   }
 
   #credit {
@@ -110,17 +97,15 @@
 /* Add this for very small screens */
 @media screen and (max-width: 480px) {
   :root {
-    --mobile-image-width: 80vw;
+    --mobile-image-width: 80vw; /* Switch to wider on very small screens */
   }
 
   .row {
     flex-direction: column;
-    align-items: center; /* Add this */
   }
 
   .column {
     flex: 0 0 100%;
-    width: 80vw; /* Match the image width */
   }
 }
 

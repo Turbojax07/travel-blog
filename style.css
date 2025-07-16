@@ -29,7 +29,7 @@ img{
 
 body{
     font-family: Raleway;
-    background-color: #faf2f0;
+    background: linear-gradient(to bottom, #84E4F7 ,#faf2f0 21%);
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -279,6 +279,14 @@ main {
 }
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
+    .grow-on-hover:hover, .grow-on-hover:focus, .grow-on-hover:active {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+    body{
+            background: linear-gradient(to bottom, #84E4F7 ,#faf2f0 9%);
+    }
   .waves {
     height:40px;
     min-height:40px;
@@ -293,18 +301,6 @@ main {
 /* random ass dolphin I found on codepen */
 
 @keyframes dolphinMove {
-
-    /* from{
-        transform: rotate(8deg);;
-        margin-top: 22vmin;
-        margin-left: 15vmin;
-    }
-    to{
-        transform: rotate(-90deg);;
-         margin-top: 140vmin;
-        margin-left: -20vmin;
-
-    } */
 
   0% {         transform: rotate(20deg);;
         margin-top: 90vmin;
@@ -628,6 +624,7 @@ main {
         font-size: 32px !important;
         width: 90% !important;
         margin: 10px auto;
+        padding-top: 1.5%;
     }
 
     /* Map container adjustments */
@@ -685,6 +682,19 @@ main {
         width: 6vmin;
         height: 6vmin;
     }
+
+    @keyframes dolphinMove {
+
+        0% {         transform: rotate(120deg);;
+                margin-top: 300vmin;
+                margin-left: 15vmin;}
+        25% { transform: rotate(-20deg); 
+            margin-top: 80vmin;
+        }
+        100% { transform: rotate(-140deg);;
+                margin-top: 300vmin;
+                margin-left: -20vmin;}
+        }
 
     /* Footer adjustments */
     #credit {
