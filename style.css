@@ -733,6 +733,8 @@ main {
 
 /* Special landscape orientation fixes */
 @media only screen and (max-height: 768px) and (orientation: landscape) {
+
+
     h1 {
         width: 95vw !important;
         font-size: 5vw !important;
@@ -833,7 +835,7 @@ main {
     position: fixed; /* Changed from sticky to fixed */
     top: 10px;
     left: 10px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 12px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -844,21 +846,45 @@ main {
     margin: 0; /* Remove any margins */
 }
 
+    #fishStart:hover {
+        opacity: 1;
+        background-color: white;
+    }
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     #fishStart {
         padding: 6px 8px;
         font-size: 12px;
-        top: 5px;
-        left: 5px;
-        opacity: 0.7;
-        background-color: rgba(255, 255, 255, 0.8);
+        top: auto; /* Remove top positioning */
+        bottom: 10px; /* Position from bottom */
+        left: 10px;
+        right: auto;
+        opacity: 1;
+        background-color: rgba(255, 255, 255);
         min-width: 0;
         white-space: nowrap;
+        margin-bottom: 0;
+        position: fixed; /* Keep it fixed */
     }
-    
-    #fishStart:hover {
-        opacity: 1;
-        background-color: white;
+}
+
+@media only screen and (max-height: 768px) and (orientation: landscape) {
+    #fishStart {
+        bottom: 10px;
+        top: auto;
+        left: 10px;
+        right: auto;
+        background-color: rgba(255, 255, 255, 1) !important;
+    }
+}
+
+/* Extra small landscape screens (like iPhone SE) */
+@media only screen and (max-height: 400px) and (orientation: landscape) {
+    #fishStart {
+        bottom: 5px;
+        left: 5px;
+        padding: 4px 6px;
+        font-size: 10px;
     }
 }

@@ -33,6 +33,9 @@
     font-size: 2.3vh !important;
     margin: 10px auto;
     box-sizing: border-box;
+    white-space: normal; /* Ensure text wraps */
+    word-wrap: break-word; /* Allow long words to break */
+    overflow-wrap: break-word; /* Alternative property for word breaking */
   }
 
   /* Update image styles */
@@ -131,6 +134,11 @@
   .column {
     flex: 0 0 100%;
     width: 80vw; /* Match the image width */
+  }
+    p {
+    width: 90vw; /* Slightly wider than image width for better text flow */
+    min-width: 90vw; /* Match width */
+    padding: 15px; /* Slightly reduce padding if needed */
   }
 }
 
@@ -2728,5 +2736,10 @@ span{
   .island {
     top: 50%;
     transform: translate(-20%, -50%);
+  }
+}
+@media only screen and (max-height: 480px) and (orientation: landscape){
+  p{
+       font-size: 5.5vh !important;
   }
 }
