@@ -279,6 +279,8 @@ main {
 }
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
+
+
     .grow-on-hover:hover, .grow-on-hover:focus, .grow-on-hover:active {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
@@ -293,9 +295,6 @@ main {
   }
   .content {
     height:30vh;
-  }
-  h1 {
-    font-size:24px;
   }
 }
 /* random ass dolphin I found on codepen */
@@ -621,16 +620,26 @@ main {
 }
     /* Main title adjustments */
     h1 {
-        font-size: 32px !important;
+        font-size: 2vh !important;
         width: 90% !important;
         margin: 10px auto;
-        padding-top: 1.5%;
+        padding: 2.5%;
     }
 
     /* Map container adjustments */
     .map {
-        width: 95% !important;
-        margin: 0 auto;
+        width: 82% !important;
+        height: 82% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #mapImg {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
     }
 
     .locations{
@@ -705,9 +714,6 @@ main {
 
 @media (max-width: 480px) {
     /* Further adjustments for very small screens */
-    h1 {
-        font-size: 24px !important;
-    }
 
     .grid-preview p {
         font-size: 18px;
@@ -721,6 +727,78 @@ main {
 
     /* Hide some rays on very small screens */
     .ray6, .ray7, .ray8, .ray9, .ray10 {
+        display: none;
+    }
+}
+
+/* Special landscape orientation fixes */
+@media only screen and (max-height: 768px) and (orientation: landscape) {
+    h1 {
+        width: 95vw !important;
+        font-size: 5vw !important;
+        padding: 10px !important;
+        margin: 5px auto !important;
+        line-height: 1.3 !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+    }
+
+    /* Adjust the grid layout for landscape */
+    .grid-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        max-width: 95vw !important;
+        gap: 10px !important;
+    }
+
+    .grid-preview {
+        height: 25vh !important;
+        min-height: 120px !important;
+    }
+
+    .grid-preview p {
+        font-size: 3vw !important;
+        margin-top: 5vh !important;
+        padding-right: 5% !important;
+    }
+
+    /* Adjust map sizing */
+    .map {
+        max-width: 60% !important;
+        max-height: 60% !important;
+        padding-top: 2%;
+    }
+
+    /* Make sun smaller in landscape */
+    .sun {
+        margin-top: 4.25%;
+        width: 60px !important;
+        height: 60px !important;
+        top: 5% !important;
+        right: 5% !important;
+        z-index: -100000;
+    }
+
+    .locations{
+        display: none;
+    }
+}
+
+/* Extra small landscape screens (like iPhone SE) */
+@media only screen and (max-height: 400px) and (orientation: landscape) {
+    h1 {
+        font-size: 4vw !important;
+        padding: 5px !important;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .grid-preview {
+        height: 20vh !important;
+    }
+
+    .locations{
         display: none;
     }
 }

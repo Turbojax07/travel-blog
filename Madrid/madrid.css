@@ -18,12 +18,12 @@
     text-align: center;
   }
 
-  h1 {
-    min-width: 90%;
-    font-size: 40px;
-    margin: 10px auto;
-    padding: 10px;
-  }
+     h1 {
+        font-size: 3vh !important;
+        width: 80% !important;
+        margin: 10px auto;
+        padding: 1.5%;
+    }
 
   /* Update paragraph styles to match image width */
   p {
@@ -262,3 +262,13 @@ span{
     transform: scale(1.05);
 }
 
+@media only screen and (max-height: 768px) and (orientation: landscape) {
+  p{
+    width: 58% !important;
+  }
+
+  h1{
+    width: 80% !important;
+  }
+
+}
