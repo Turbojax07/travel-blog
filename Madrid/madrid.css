@@ -269,6 +269,27 @@ span{
 
   h1{
     width: 80% !important;
+    font-size: 10vh !important;
+    padding: 5px;
+
+  }
+
+
+  /* Add these new rules for landscape mobile view */
+  .main-image,
+  img[style*="max-width: 40%"] {
+    width: 65% !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+
+  .column {
+    flex: 0 0 65%;
+    max-width: 40%;
+  }
+
+  figcaption {
+    width: 65%;
   }
 
 }

@@ -158,13 +158,13 @@ span:hover{
         /* Individual grids */
 
         #grid1{
-            background: #ffd8c5;
+            background: #f0c5c5;
         }
         #grid2{
-            background: #b8e0d2;
+            background: #d4e0c5;
         }
         #grid3{
-            background: #e8c4c4;
+            background: #bed7ea;
         }
         #grid4{
             background: #d4c5e3;
@@ -781,6 +781,20 @@ main {
     .locations{
         display: none;
     }
+
+    @keyframes dolphinMove {
+
+  0% {         transform: rotate(20deg);;
+        margin-top: 90vmin;
+        margin-left: 15vmin;}
+  25% { transform: rotate(-10deg); 
+    margin-top: 20vmin;
+}
+  100% { transform: rotate(-110deg);;
+         margin-top: 140vmin;
+        margin-left: -20vmin;}
+}
+
 }
 
 /* Extra small landscape screens (like iPhone SE) */
