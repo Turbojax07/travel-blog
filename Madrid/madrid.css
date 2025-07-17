@@ -30,7 +30,7 @@
     width: var(--mobile-image-width);
     min-width: 80%; /* Prevent becoming too narrow */
     padding: 20px;
-    font-size: 18px;
+    font-size: 2.3vh !important;
     margin: 10px auto;
     box-sizing: border-box;
   }

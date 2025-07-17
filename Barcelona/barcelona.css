@@ -19,8 +19,8 @@
   }
 
      h1 {
-        font-size: 3vh !important;
-        width: 80% !important;
+        font-size: 2.3vh !important;
+        width: 90% !important;
         margin: 10px auto;
         padding: 1.5%;
     }
@@ -30,7 +30,7 @@
     width: var(--mobile-image-width);
     min-width: 80%; /* Prevent becoming too narrow */
     padding: 20px;
-    font-size: 18px;
+    font-size: 2.3vh !important;
     margin: 10px auto;
     box-sizing: border-box;
   }
@@ -283,7 +283,7 @@ span{
 
   h1{
     width: 80% !important;
-    font-size: 10vh !important;
+    font-size: 8vh !important;
     padding: 5px;
 
   }
