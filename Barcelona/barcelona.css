@@ -14,6 +14,13 @@
 
 /* Update the existing media query */
 @media screen and (max-width: 768px) {
+    iframe{
+        max-width: 95%;
+        max-height: 95%;
+        box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+        border-radius: 20px;
+    }
+
   body {
     text-align: center;
   }
