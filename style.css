@@ -97,7 +97,34 @@ span:hover{
     transition: ease 0.25s;
 }
 
+/* grids */
 
+/* Add these rules to your CSS */
+.grid-preview {
+    position: relative; /* Needed for proper containment */
+    overflow: hidden; /* Prevents content from overflowing */
+    display: flex; /* New flex layout */
+    align-items: center; /* Vertical centering */
+    justify-content: space-between; /* Space between text and image */
+    padding: 15px; /* Maintain your existing padding */
+}
+
+.thumbnails {
+    max-width: 60%; /* Adjust this percentage to control image size */
+    max-height: 90%; /* Adjust based on your needs */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures whole image is visible */
+    margin-left: 10px; /* Space between text and image */
+}
+
+.grid-preview p {
+    margin: 0;
+    font-size: 25px; /* Keep your existing size */
+    font-weight: 500; /* Keep your existing weight */
+    padding-right: 10px; /* Adjust as needed */
+    flex-shrink: 0; /* Prevents text from shrinking */
+}
         
         .grid-title {
             grid-column: 1 / -1;
