@@ -55,7 +55,7 @@ img {
 #layerScreen {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     animation: loadInColor 1.5s ease-out forwards;
     pointer-events: none;
     z-index: 100000;
