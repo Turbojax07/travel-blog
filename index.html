@@ -1,143 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mediterranean 2025</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <script src="ocean.js" defer></script>
 </head>
+
 <body>
     <div id="layerScreen"></div>
     <div id="fishStart">Click me :)</div>
-    <center>
-        <main>
-        
-    <h1 style="background-color: white; width: 1200px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.3); font-size: 60px;">✨🌴 2025 Summer Travel Blog! ✨☀️</h1>
-    <div class="map" style="max-width: 85%; max-height: 85%;">
+    <main>
+        <h1 id="title">✨🌴 2025 Summer Travel Blog! ✨☀️</h1>
+
+        <div class="map" style="max-width: 85%; max-height: 85%;">
             <span id="location1" class="locations" onclick="window.location.href='google.com'"></span>
-            <span  id="location2" class="locations" onclick="window.location.href='google.com'"></span>
-            <span  id="location3" class="locations" onclick="window.location.href='google.com'"></span>
+            <span id="location2" class="locations" onclick="window.location.href='google.com'"></span>
+            <span id="location3" class="locations" onclick="window.location.href='google.com'"></span>
             <span id="location4" class="locations" onclick="window.location.href='google.com'"></span>
-            <span  id="location5" class="locations" onclick="window.location.href='google.com'"></span>
+            <span id="location5" class="locations" onclick="window.location.href='google.com'"></span>
             <span id="location6" class="locations" onclick="window.location.href='google.com'"></span>
-            <span id="location7" class="locations" onclick="window.location.href='Barcelona/barcelona.html'"></span>
-            <span id="location8" class="locations" onclick="window.location.href='Madrid/madrid.html'"></span>
-            <img id="mapImg" style="display: block; margin-left: auto; margin-right: auto; max-width: 85%; max-height: 85%; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.5);" src="assets/Map_2025.png">
+            <span id="location7" class="locations" onclick="window.location.href='/Barcelona/barcelona.html'"></span>
+            <span id="location8" class="locations" onclick="window.location.href='/Madrid/madrid.html'"></span>
+            <img id="mapImg" src="/assets/Map_2025.png" />
+        </div>
 
-    </div>
+        <!-- The different places -->
+        <div class="grid-container">
+            <!-- Grid 1: Basic 2x2 -->
+            <div class="grid-preview grow-on-hover" id="grid1" onclick="window.location.href='/Madrid/madrid.html'">
+                <div>
+                    <p>Madrid</p>
+                    <img class="emoji" src="/assets/flag_es.svg" />
+                </div>
+                <img class="thumbnails" src="assets/Madrid_thumbnail.jpg" alt="Madrid" />
+            </div>
 
-     
-    <!-- The different places -->
- 
-        <div class="grid-container" >
-        
-        <!-- Grid 1: Basic 2x2 -->
-        <div class="grid-preview grow-on-hover" id="grid1" onclick="window.location.href='Madrid/madrid.html'">
-            <p>Madrid 🇪🇸</p>
-            <img id="madridThumbnail" class="thumbnails" src="assets/Madrid_thumbnail.jpg" alt="madrid thumbnail">
-        </div>
-        
-        <!-- Grid 2: Left Wide -->
-        <div class="grid-preview grow-on-hover" id="grid2" onclick="window.location.href='Barcelona/barcelona.html'"> 
-            <p>Barcelona 🇪🇸</p>
-            <img id="madridThumbnail" class="thumbnails" src="assets/Barcelona_thumbnail.jpg" alt="madrid thumbnail">
-        </div>
-        
-        <!-- Grid 3: Right Wide -->
-        <div class="grid-preview grow-on-hover" id="grid3">
-            <p>Provence 🇫🇷</p>
-            <img id="madridThumbnail" class="thumbnails" src="assets/pont.jpg" alt="madrid thumbnail">
-        </div>
-        
-        <!-- Grid 4: Header + 3 Col -->
-        <div class="grid-preview grow-on-hover" id="grid4">
-            <p>Avignon 🇫🇷</p>
-            <img id="madridThumbnail" class="thumbnails" src="assets/papalpalace.jpg" alt="madrid thumbnail">
-        </div>
-        
-        <!-- Grid 5: Header + 2 Col + Footer -->
-        <div class="grid-preview grow-on-hover" id="grid5">
-            <p>The Riviera 🇫🇷</p>
-            <img id="madridThumbnail" class="thumbnails" src="assets/monaco.jpg" alt="madrid thumbnail">
-        </div>
-        
-        <!-- Grid 6: 4 Column -->
-        <div class="grid-preview grow-on-hover" id="grid6">
-            <p> Cinque Terre 🇮🇹</p>
-            <img id="madridThumbnail" class="thumbnails" src="assets/cliniqueterre.jpg" alt="madrid thumbnail">       
-        </div>
-        
-        <!-- Grid 7: 3 Column (Middle Wide) -->
-        <div class="grid-preview grow-on-hover" id="grid7">
-            <p>Lake District 🇮🇹</p>
-            <img id="madridThumbnail" class="thumbnails" src="assets/lake.jpg" alt="madrid thumbnail">
-        </div>
-        
-        <!-- Grid 8: Header + 2x2 -->
-        <div class="grid-preview grow-on-hover" id="grid8">
-            <p>Lucerne 🇨🇭</p>
-            <img id="madridThumbnail" class="thumbnails" src="assets/alps.jpg" alt="madrid thumbnail">
-        </div>
-        </div>    
+            <!-- Grid 2: Left Wide -->
+            <div class="grid-preview grow-on-hover" id="grid2" onclick="window.location.href='/Barcelona/barcelona.html'">
+                <div>
+                    <p>Barcelona</p>
+                    <img class="emoji" src="assets/flag_es.svg" />
+                </div>
+                <img class="thumbnails" src="assets/Barcelona_thumbnail.jpg" alt="Barcelona" />
+            </div>
 
-        </main>
-</center>
-        <p id="credit">Website is made with 💚 by Morgan!</p>
-                 <!--Waves Container-->
-            <div class="waveAnimation" id="waveAnimation">
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <!-- Grid 3: Right Wide -->
+            <div class="grid-preview grow-on-hover" id="grid3">
+                <div>
+                    <p>Provence</p>
+                    <img class="emoji" src="assets/flag_fr.svg" />
+                </div>
+                <img class="thumbnails" src="assets/pont.jpg" alt="Provence" />
+            </div>
+
+            <!-- Grid 4: Header + 3 Col -->
+            <div class="grid-preview grow-on-hover" id="grid4">
+                <div>
+                    <p>Avignon</p>
+                    <img class="emoji" src="assets/flag_fr.svg" />
+                </div>
+                <img class="thumbnails" src="assets/papalpalace.jpg" alt="Avignon" />
+            </div>
+
+            <!-- Grid 5: Header + 2 Col + Footer -->
+            <div class="grid-preview grow-on-hover" id="grid5">
+                <div>
+                    <p>The Riviera</p>
+                    <img class="emoji" src="assets/flag_fr.svg" />
+                </div>
+                <img class="thumbnails" src="assets/monaco.jpg" alt="The Riviera" />
+            </div>
+
+            <!-- Grid 6: 4 Column -->
+            <div class="grid-preview grow-on-hover" id="grid6">
+                <div>
+                    <p>Cinque Terre</p>
+                    <img class="emoji" src="assets/flag_it.svg" />
+                </div>
+                <img class="thumbnails" src="assets/cliniqueterre.jpg" alt="Cinque Terre" />
+            </div>
+
+            <!-- Grid 7: 3 Column (Middle Wide) -->
+            <div class="grid-preview grow-on-hover" id="grid7">
+                <div>
+                    <p>Lake District</p>
+                    <img class="emoji" src="assets/flag_it.svg" />
+                </div>
+                <img class="thumbnails" src="assets/lake.jpg" alt="Lake District" />
+            </div>
+
+            <!-- Grid 8: Header + 2x2 -->
+            <div class="grid-preview grow-on-hover" id="grid8">
+                <div>
+                    <p>Lucerne</p>
+                    <img class="emoji" src="assets/flag_ch.svg" />
+                </div>
+                <img class="thumbnails" src="assets/alps.jpg" alt="Lucerne" />
+            </div>
+        </div>
+    </main>
+    <p id="credit">Website is made with 💚 by Morgan!</p>
+    <!--Waves Container-->
+    <div class="waveAnimation" id="waveAnimation">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
-            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(66,189,187,0.7" />
-            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(66,189,187,0.5)" />
-            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(66,189,187,0.3)" />
-            <use xlink:href="#gentle-wave" x="48" y="7" fill="#42bdbb" />
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(66,189,187,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(66,189,187,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(66,189,187,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#42bdbb" />
             </g>
-            </svg>
-            </div>
-<!--Waves end-->
-<!-- Sky -->
- <div class="sun">
- <div class="ray_box">
-        <div class="ray ray1"></div>
-        <div class="ray ray2"></div>
-        <div class="ray ray3"></div>
-        <div class="ray ray4"></div>
-        <div class="ray ray5"></div>
-        <div class="ray ray6"></div>
-        <div class="ray ray7"></div>
-        <div class="ray ray8"></div>
-        <div class="ray ray9"></div>
-        <div class="ray ray10"></div>
+        </svg>
     </div>
-</div>
-<!-- dolphin -->
-  <div class="box-canvas">
-    <div class="fin-top"></div>
-    <div class="body">
-      <div class="eye"></div>
+    <!--Waves end-->
+    <!-- Sky -->
+    <div class="sun">
+        <div class="ray_box">
+            <div class="ray ray1"></div>
+            <div class="ray ray2"></div>
+            <div class="ray ray3"></div>
+            <div class="ray ray4"></div>
+            <div class="ray ray5"></div>
+            <div class="ray ray6"></div>
+            <div class="ray ray7"></div>
+            <div class="ray ray8"></div>
+            <div class="ray ray9"></div>
+            <div class="ray ray10"></div>
+        </div>
     </div>
-    <div class="cover-up"></div>
-    <div class="tail"></div>
-    <div class="nose"></div>
-    <div class="fin-front"></div>
-  </div>
-  <!-- island -->
-   <div class='tree'>
-    <div class='tree-bits'>
-        <div class='island'></div>
-        <div class='leaf leaf-one'></div>
-        <div class='leaf leaf-two'></div>
-        <div class='leaf leaf-three'></div>
-        <div class='leaf leaf-four'></div>
-        <div class='leaf leaf5'></div>
-        <div class='leaf leaf6'></div>
-        <div class='trunk trunk-one'></div>
+    <!-- dolphin -->
+    <div class="box-canvas">
+        <div class="fin-top"></div>
+        <div class="body">
+            <div class="eye"></div>
+        </div>
+        <div class="cover-up"></div>
+        <div class="tail"></div>
+        <div class="nose"></div>
+        <div class="fin-front"></div>
     </div>
-</div>
-     <script src="ocean.js"></script>
+    <!-- island -->
+    <div class="tree">
+        <div class="tree-bits">
+            <div class="island"></div>
+            <div class="leaf leaf-one"></div>
+            <div class="leaf leaf-two"></div>
+            <div class="leaf leaf-three"></div>
+            <div class="leaf leaf-four"></div>
+            <div class="leaf leaf5"></div>
+            <div class="leaf leaf6"></div>
+            <div class="trunk trunk-one"></div>
+        </div>
+    </div>
 </body>
+
 </html>
