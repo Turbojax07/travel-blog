@@ -71,7 +71,7 @@ main {
         padding-bottom: 2vh;
     }
     .grid-preview img{
-        margin-top: -7.5vh !important;
+        margin-top: -6vh !important;
     }
 }
 
@@ -261,7 +261,7 @@ span:hover {
 
 .grid-preview div p {
     margin: 0;
-    font-size: 25px; /* Keep your existing size */
+    font-size: 3vh; /* Keep your existing size */
     font-weight: 500; /* Keep your existing weight */
     padding-right: 10px; /* Adjust as needed */
     flex-shrink: 0; /* Prevents text from shrinking */
@@ -840,7 +840,7 @@ main {
 
     /* Main title adjustments */
     #title {
-        font-size: 2vh ;
+        font-size: 2vh;
         width: 90% !important;
         margin: 10px auto;
         padding: 2.5%;
