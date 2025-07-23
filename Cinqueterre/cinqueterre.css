@@ -2744,9 +2744,29 @@ span{
     top: 50%;
     transform: translate(-20%, -50%);
   }
+  #spotifyMusic{
+    width: 65vw !important;
+  }
+
 }
 @media only screen and (max-height: 480px) and (orientation: landscape){
   p{
        font-size: 5.5vh !important;
   }
+
+}
+
+iframe{
+    box-shadow: none;
+}
+
+@media screen and (min-width:768px) { 
+    iframe{
+        width: 40vw;
+    }
+}
+
+
+.after-spotify {
+  margin-top: -5vh !important;
 }
