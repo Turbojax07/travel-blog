@@ -9,7 +9,6 @@
     -webkit-animation:
         mike-float 3.2s infinite;
     animation: mike-float 3.2s infinite;
-    ;
     box-shadow: none;
     position: fixed;
     z-index: 100;
