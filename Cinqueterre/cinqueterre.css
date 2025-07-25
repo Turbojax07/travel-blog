@@ -11,9 +11,11 @@
     animation: mike-float 3.2s infinite;
     box-shadow: none;
     position: fixed;
-    z-index: 100;
+    z-index: -100;
     max-width: 40%;
     max-height: 40%;
+    bottom: 0;
+    left: 0;
 }
 
 
